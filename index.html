@@ -9,11 +9,8 @@
 	<link rel="stylesheet" type="text/css" media="screen" href="/MyPhotostream/fancybox/jquery.fancybox-1.3.4.css">
 
 	<meta property="og:type" content="product">
-	<meta property="og:url" content="http://www.weareYeah.com/DockPhone/">
 	<meta property="og:title" content="Troga - Translate. Forget. Recall. Repeat.">
-	<meta property="og:image" content="http://www.weareYeah.com/DockPhone/assets/og_image_dockphone.jpg">
 	<meta property="og:site_name" content="Troga for OS X">
-	<meta property="fb:admins" content="1418913000">
 	<meta property="og:description" content="Translate. Forget. Recall. Repeat.">
 	
 	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
@@ -22,6 +19,10 @@
 	<script type="text/javascript" src="/MyPhotostream/fancybox/jquery.fancybox-1.3.4.js"></script>
 	
 	<script type="text/javascript">
+		$("a[href='#top']").click(function() {
+			$("html, body").animate({ scrollTop: 0 }, "slow");
+				return false;
+		});
 		$(document).ready(function(){
 			
 			var hidden = true;
@@ -195,67 +196,12 @@
 				
 			</section>
 			
-<!-- 			<section id="voicedial" class="">
-				<div class="wrapper" style="position: relative;">
-					<h2>Including VoiceDial</h2>
-					<h3>Just dictate who you want to call.</h3>
-					<img src="assets/Dictate.png" alt="VoiceDial means to dictate the name of the contact you want to call." class="retina" style="position: absolute; top: -10px; left: 150px;">
-					<p>With DockPhone, manually typing out a phone number is over. Just dictate the name of the contact, or the individual digits which you want to call. It's that simple.</p>
-					
-					<ul id="thumbnails">
-						<li><a class="fancy" href="assets/1@2x.jpg"><img src="assets/thumbs/1.jpg"></a></li>
-						<li><a class="fancy" href="assets/2@2x.jpg"><img src="assets/thumbs/2.jpg"></a></li>
-						<li><a class="fancy" href="assets/3@2x.jpg"><img src="assets/thumbs/3.jpg"></a></li>
-						<li><a class="fancy" href="assets/4@2x.jpg"><img src="assets/thumbs/4.jpg"></a></li>
-						<li><a class="fancy" href="assets/5@2x.jpg"><img src="assets/thumbs/5.jpg"></a></li>
-					</ul>
-					
-					<h3 style="margin-top: 150px;">As seen on these websites:</h3>
-					<img src="assets/reviewed-by.png" class="retina" style="margin: 10px auto -100px; display: block;">
-					
-				</div>
-			</section>
-			
-			<section>
-				<h2 style="padding-top: 20px;">Technical Requirements</h2>
-				<ul id="requirements">
-					<li>iPhone with iOS 8 or later,</li>
-					<li>Mac with OS X Yosemite,</li>
-					<li>Both in the same Wifi,</li>
-					<li>Both configured to use the same iCloud account,</li>
-					<li>Wifi calls (iPhone 6 or later) disabled,</li>
-					<li>FaceTime on Mac and iPhone configured to use that iCloud account</li>
-				</ul>
-				<p>Check our <a href="./help/">Help</a> page for troubleshooting information.</p>
-			</section>
-			
-			<section id="convincing">
-				<img src="http://www.weareyeah.com/assets/DockPhone.png" width="128" style="display: block; margin: -10px auto 15px;" class="retina">						
-			
-								
-				<a href="./download" class="download">
-					<img src="assets/downloadMacAppStore.svg" width="250" style="margin: auto;">
-				</a>
-				
-				<p>Download DockPhone in the Mac App Store.
-				<br>Feel free to send us your suggestions to <a href="mailto:ph%6F%6Ee@w%65a%72eyeah%2Ecom" class="blue-link">DockPhone@weareyeah.com</a> or <a href="http://twitter.com/DockPhone" target="_blank" class="blue-link">@DockPhone</a>.</p>
-				
-			</section>
-			
-			<section id="newsletter">
-				<h2>Stay Connected</h2>
-				<p>Sign up for our newsletter. We won't spam you, but we would like to notify you about future updates for<br> <strong>DockPhone</strong> and <strong>DockPhone for iOS</strong>.</p>
-								
-				<h2>Need Help?</h2>
-				<p>We're always here for you. Check our <a href="./help/">Help</a> page.</p>
-				
-			</section> -->
 			<footer>
 					<div class="wrapper">
 						<div class="thin-border"></div>
 						
 				<!--		<a href="/" class="bold">More apps from us</a>-->						
-						<a href="http://twitter.com/buddax2" target="_blank"><img src="images/Troga-red.png" width="50" style="display: block; margin: -10px auto 15px;" class="retina"></a>
+						<a href="#top" ><img src="images/Troga-red.png" width="50" style="display: block; margin: -10px auto 15px;" class="retina"></a>
 						<a href="mailto:theTroga@gmail.com">Get in contact</a>
 						<!-- <a href="./help/">Help &amp; FAQ</a> -->
 						<a href="http://twitter.com/TrogaApp" target="_blank"><strong>@TrogaApp</strong></a>
