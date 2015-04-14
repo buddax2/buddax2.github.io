@@ -1,1 +1,312 @@
-Hello World
+<!DOCTYPE html>
+<html><head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge;chrome=1">
+	
+	<title dir="ltr">Troga - Translate. Forget. Recall. Repeat.</title>	
+	<link rel="stylesheet" type="text/css" media="screen" href="default.css">
+	<link rel="stylesheet" type="text/css" media="screen" href="fancybox/jquery.fancybox-1.3.4.css">
+	<link rel="stylesheet" type="text/css" media="screen" href="/MyPhotostream/fancybox/jquery.fancybox-1.3.4.css">
+
+	<meta property="og:type" content="product">
+	<meta property="og:url" content="http://www.weareYeah.com/DockPhone/">
+	<meta property="og:title" content="Troga - Translate. Forget. Recall. Repeat.">
+	<meta property="og:image" content="http://www.weareYeah.com/DockPhone/assets/og_image_dockphone.jpg">
+	<meta property="og:site_name" content="Troga for OS X">
+	<meta property="fb:admins" content="1418913000">
+	<meta property="og:description" content="Translate. Forget. Recall. Repeat.">
+	
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
+	<script type="text/javascript" src="retina.js"></script>
+	<script type="text/javascript" src="frogaloop.min.js"></script>
+	<script type="text/javascript" src="/MyPhotostream/fancybox/jquery.fancybox-1.3.4.js"></script>
+	
+	<script type="text/javascript">
+		$(document).ready(function(){
+			
+			var hidden = true;
+			$(document).scroll(function(){
+				var y = $(document).scrollTop();
+				if (y>580 && hidden) {
+					hidden = false;
+					$('#more-apps').fadeIn();
+				} else if (y<580 && !hidden) {
+					hidden = true;
+					$('#more-apps').fadeOut();
+				}
+			});
+			var playButtons = $('.ui-play');
+			
+			$('.ui-close').click(hidePlayer);
+			$('#screenshots').hover(function(){
+				$(this).addClass('transparent');
+			},function(){
+				$(this).removeClass('transparent');
+			});
+			playButtons.click(function(){
+					prepareAsInBackground(0,true);
+				});
+			function prepareAsInBackground(i,bg) {								
+	
+					$('.ui-close').fadeIn();
+					$('.ui-play').animate({opacity:0}, 300);
+						
+					var vimeo = true||retina;
+
+					$('.vimeo-container').addClass('playing');
+				$('#triangle').fadeOut();
+
+					setTimeout(function(){
+							$('.vimeo-container').html('<iframe id="vimeo'+(i?'a':'b')+'" src="//player.vimeo.com/video/114490592?autoplay=1" width="1000" height="520" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>').addClass('mouse');
+					}, 500);
+				}
+			
+			function hidePlayer() {
+				$('#triangle').fadeIn();
+				$('.ui-close').fadeOut();
+				$('.ui-play').animate({opacity:1},300);
+				
+				$('.vimeo-container').html('').removeClass('mouse').removeClass('playing');
+			}
+			
+			$('#overlay-bg').click(function(){
+				$('#overlay').addClass('fading');
+				setTimeout(function(){
+					$('#overlay').remove();
+				}, 500);
+			});
+			
+			$('a.fancy').fancybox({
+				'cyclic'		: true,
+				'autoScale'		: true,
+				'transitionIn'	: 'elastic',
+				'transitionOut'	: 'elastic',
+				'imageScale'	: true,
+				'speedIn'		: 200,
+				'speedOut'		: 200,
+				'overlayShow'	: false,
+				'overlayOpacity': 1.0,
+				'overlayColor'	: '#ffffff',
+				'hideOnOverlayClick': true,
+				'padding'			: 0,
+				'titleShow': true,
+				'titleFromAlt': true,
+				onStart: function(){
+					$('#page').addClass('background');
+				},
+				onClosed: function(){
+					$('#page').removeClass('background');
+				}
+			});
+			
+			
+		});
+		
+		
+	</script>
+	<style>
+		#overlay-bg {
+			cursor: pointer;
+		}
+		#overlay {
+			-webkit-transition: opacity 500ms ease-in-out 0s;
+		}
+		#overlay.fading {
+			opacity: 0;
+		}
+		#overlay i {
+			font-weight:normal;
+			font-style: normal;
+			padding: 0px 0 10px;
+			display: block;
+			margin: 0;
+			color: #111;
+		}
+		#overlay i:first-of-type {
+			font-size: 23px;
+		}
+		#overlay p {
+			color: #666;
+			font-size: 16px;
+		}
+		#overlay .download {
+			position: static;
+			margin: 20px auto;
+		}
+		#box {
+			width: 600px;
+			height: 470px;
+			margin-left: -300px; 
+			padding: 30px 40px;
+			box-shadow: 0px 3px 35px -10px black;
+		}
+		#overlay #alert {
+			margin: -100px 0 -40px 35px;
+			display: block;
+		}
+		#overlay hr {
+			width: 50px;
+			margin: 8px 0;
+			background: transparent;
+			border: none;
+			border-top: 2px solid #aaa;
+		}
+		#overlay hr + p {
+			color: #aaa;
+		}
+		#overlay span {
+			display: block;
+			margin: -25px 0 10px 155px;
+			width: 300px;
+			color: #999;
+			font-size: 12px;
+		}
+		#expire-hint {
+			position: absolute;
+			top:  20px;
+			right:  20px;
+		}
+		#expire-hint img {
+			width: 200px;
+		}
+	</style>
+<style type="text/css">#mc_embed_signup input.mce_inline_error { border-color:#6B0505; } #mc_embed_signup div.mce_inline_error { margin: 0 0 1em 0; padding: 5px 10px; background-color:#6B0505; font-weight: bold; z-index: 1; color:#fff; }</style></head>
+<body style="zoom: 1;">
+
+	<div id="page">
+		<div id="layered-content">
+			<section id="introduction" class="blue-box">
+			    <div class="wrapper">
+					
+					<div id="screenshots" class="">
+						<img src="images/s5.png" class="retina">						
+					</div>
+						
+					<h1>You will not forget, what you translated.</h1>
+				</div>
+			</section>
+			
+			<section id="facts" class="">
+				<a href="./download" class="first download">
+					<img src="images/Download_on_the_Mac_App_Store_Badge_US-UK_165x40.svg" width="165" style="margin: auto;">
+				</a>
+				
+				<p id="explanation">Download it for <strong>free</strong></p>
+				
+			</section>
+			
+<!-- 			<section id="voicedial" class="">
+				<div class="wrapper" style="position: relative;">
+					<h2>Including VoiceDial</h2>
+					<h3>Just dictate who you want to call.</h3>
+					<img src="assets/Dictate.png" alt="VoiceDial means to dictate the name of the contact you want to call." class="retina" style="position: absolute; top: -10px; left: 150px;">
+					<p>With DockPhone, manually typing out a phone number is over. Just dictate the name of the contact, or the individual digits which you want to call. It's that simple.</p>
+					
+					<ul id="thumbnails">
+						<li><a class="fancy" href="assets/1@2x.jpg"><img src="assets/thumbs/1.jpg"></a></li>
+						<li><a class="fancy" href="assets/2@2x.jpg"><img src="assets/thumbs/2.jpg"></a></li>
+						<li><a class="fancy" href="assets/3@2x.jpg"><img src="assets/thumbs/3.jpg"></a></li>
+						<li><a class="fancy" href="assets/4@2x.jpg"><img src="assets/thumbs/4.jpg"></a></li>
+						<li><a class="fancy" href="assets/5@2x.jpg"><img src="assets/thumbs/5.jpg"></a></li>
+					</ul>
+					
+					<h3 style="margin-top: 150px;">As seen on these websites:</h3>
+					<img src="assets/reviewed-by.png" class="retina" style="margin: 10px auto -100px; display: block;">
+					
+				</div>
+			</section>
+			
+			<section>
+				<h2 style="padding-top: 20px;">Technical Requirements</h2>
+				<ul id="requirements">
+					<li>iPhone with iOS 8 or later,</li>
+					<li>Mac with OS X Yosemite,</li>
+					<li>Both in the same Wifi,</li>
+					<li>Both configured to use the same iCloud account,</li>
+					<li>Wifi calls (iPhone 6 or later) disabled,</li>
+					<li>FaceTime on Mac and iPhone configured to use that iCloud account</li>
+				</ul>
+				<p>Check our <a href="./help/">Help</a> page for troubleshooting information.</p>
+			</section>
+			
+			<section id="convincing">
+				<img src="http://www.weareyeah.com/assets/DockPhone.png" width="128" style="display: block; margin: -10px auto 15px;" class="retina">						
+			
+								
+				<a href="./download" class="download">
+					<img src="assets/downloadMacAppStore.svg" width="250" style="margin: auto;">
+				</a>
+				
+				<p>Download DockPhone in the Mac App Store.
+				<br>Feel free to send us your suggestions to <a href="mailto:ph%6F%6Ee@w%65a%72eyeah%2Ecom" class="blue-link">DockPhone@weareyeah.com</a> or <a href="http://twitter.com/DockPhone" target="_blank" class="blue-link">@DockPhone</a>.</p>
+				
+			</section>
+			
+			<section id="newsletter">
+				<h2>Stay Connected</h2>
+				<p>Sign up for our newsletter. We won't spam you, but we would like to notify you about future updates for<br> <strong>DockPhone</strong> and <strong>DockPhone for iOS</strong>.</p>
+								
+				<h2>Need Help?</h2>
+				<p>We're always here for you. Check our <a href="./help/">Help</a> page.</p>
+				
+			</section> -->
+			<footer>
+					<div class="wrapper">
+						<div class="thin-border"></div>
+						
+				<!--		<a href="/" class="bold">More apps from us</a>-->						
+						<a href="http://twitter.com/buddax2" target="_blank"><img src="images/Troga-red.png" width="50" style="display: block; margin: -10px auto 15px;" class="retina"></a>
+						<a href="mailto:theTroga@gmail.com">Get in contact</a>
+						<!-- <a href="./help/">Help &amp; FAQ</a> -->
+						<a href="http://twitter.com/TrogaApp" target="_blank"><strong>@TrogaApp</strong></a>
+						<a href="http://twitter.com/buddax2" target="_blank"><strong>@BUDDAx2</strong></a>
+												
+					</div>
+			</footer>
+			
+		</div>
+	</div>
+	
+	
+	<script type="text/javascript">
+	$(document).ready(function(){
+			
+			function selectionDidChange(idx) {
+				$('.selection-based').each(function(){
+					var found = -1;
+					$(this).children().each(function(i,elem){
+						$(this).removeClass('current');
+						if (i==idx) found=$(elem);
+					});
+					console.log(found);
+					
+					setTimeout(function(){
+						found.addClass('current');
+					}, 0);
+					
+				});
+			}
+			
+			$('#screenshots .images li').click(function(){
+				var self = this, idx = -1;
+				$(this).parent().children().each(function(i){
+					$(this).removeClass('active');
+					if (this==self) idx = i;
+				});
+				$($('.segmented-control li')[idx]).click();
+			});
+			
+			$('.segmented-control li').click(function(){
+				var self = this, idx = -1;
+				$(this).parent().children().each(function(i){
+					$(this).removeClass('active');
+					if (this==self) idx = i;
+				});
+				$(this).addClass('active');
+				selectionDidChange(idx);
+			});
+		});
+	</script>
+	<script type="text/javascript" src="/slimstat/?js"></script>
+
+</body></html>
