@@ -153,6 +153,7 @@ header .download {
 #screenshots img {
 	margin: 0 auto;
 	display: block;
+	padding-right: 100px;
 }
 section {
 	padding: 50px 0;
@@ -328,7 +329,7 @@ ul.selection-based li.current {
 #screenshots {
 	height: 220px;
 	padding-top: 80px;
-	width: 860px;
+	width: 950px;
 	margin: 0px auto;
 	-webkit-perspective: 8000;
 	-webkit-transition: opacity 500ms ease-in-out 0s;
@@ -585,7 +586,7 @@ section#facts small {
 #explanation {
 	width: 600px;
 	color: #555;
-	margin: 40px auto 0;
+	margin: 0px auto 0;
 }
 
 #explanation strong {
@@ -756,6 +757,7 @@ footer {
 	height: 90px;
 	padding: 30px 0;
 	position: relative;
+	clear: both;
 }
 footer .thin-border {
 	margin-bottom: 20px;
@@ -907,11 +909,11 @@ ui-close:active {
 	margin-left: -30px;
 	margin-right: 10px;
 	margin-bottom: -3px;
-	background: url(http://www.weareyeah.com/MyPhotostream/assets/checkmark@2x.png);
+	background: url(images/tick.png);
 	background-size: 100%;
 	display: inline-block;
-	width: 20px;
-	height: 20px;
+	width: 16px;
+	height: 16px;
 }
 #requirements li:last-of-type {
 	border-bottom: 0;
@@ -994,4 +996,36 @@ button, input[type=submit] {
 	border-top: 1px solid #ccc;
 	padding-top: 20px;
 	margin-top: 20px;
+}
+
+#featureBox {
+	width: 200px;
+	display: block;
+	position: relative;
+	float: left;
+	padding-right: 50px;
+}
+
+#featureBox img {
+	padding-left: 50px;
+}
+
+#featureTitle {
+	font-size: 28px;
+	width: 100%;
+	text-align: center;
+	padding-bottom: 20px;
+}
+
+#featureText {
+	font: 16px/24px "Helvetica Neue",Helvetica,Arial,Geneva,sans-serif;
+	font-weight: 300;
+	width: 100%;
+	text-align: center;
+}
+
+#features {
+    height: 500px;
+    width: 800px;
+    left: 50%;
 }
