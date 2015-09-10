@@ -1,3 +1,5 @@
-{
-	"streamURL":"http://online.radiotrek.rv.ua:8010/online"
-}
+[
+	{
+		"streamURL":"http://online.radiotrek.rv.ua:8010/online"
+	}
+]
